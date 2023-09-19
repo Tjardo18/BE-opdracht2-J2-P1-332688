@@ -24,7 +24,8 @@ class Voertuig extends BaseController
             <th>Bouwjaar</th>
             <th>Brandstof</th>
             <th>Rijbewijscategorie</th>
-            <th>Wijzigen</th>";
+            <th>Wijzigen</th>
+            <th>Verwijderen</th>";
 
             $result = $this->voertuigModel->getVoertuigen($id);
             $rows = "";
@@ -39,6 +40,11 @@ class Voertuig extends BaseController
                 <td>
                     <a href='../../wijzigen/id/$voertuig->VoertuigID'>
                         <i class='bx bxs-pencil' style='color:#29fd53'></i>
+                    </a>
+                </td>
+                <td>
+                    <a href='../../delete/id/$voertuig->VoertuigID'>
+                        <i class='bx bxs-trash' style='color:#ff0000'></i>
                     </a>
                 </td>
                 </tr>";
