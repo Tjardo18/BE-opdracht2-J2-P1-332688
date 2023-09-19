@@ -20,10 +20,10 @@ class AlleVoertuigenModel
                        TV.Rijbewijscategorie,
                        CONCAT_WS(
                             ' ',
-                            I.Voornaam,
                             I.Tussenvoegsel,
                             I.Achternaam
-                        ) AS InstructeurNaam
+                        ) AS InstructeurNaam,
+                        I.Id AS InstructeurID
                 FROM Voertuig V
                 JOIN TypeVoertuig TV ON V.TypeVoertuigId = TV.Id
                 LEFT JOIN VoertuigInstructeur VI ON V.Id = VI.VoertuigId

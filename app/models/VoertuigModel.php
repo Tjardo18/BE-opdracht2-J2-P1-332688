@@ -12,6 +12,7 @@ class VoertuigModel
     public function getVoertuigen($Id)
     {
         $sql = "SELECT 
+                    Instructeur.Id AS InstructeurID,
                     Voertuig.Id AS VoertuigID
                     ,TypeVoertuig.TypeVoertuig
                     ,Voertuig.Type

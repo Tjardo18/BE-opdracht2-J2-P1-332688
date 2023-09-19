@@ -16,6 +16,7 @@ class AlleVoertuigen extends BaseController
         if ($result == null) {
             $th = "";
             $rows = "<h2>Er zijn geen voertuigen beschikbaar op dit moment.</h2>";
+            header("refresh:3;url=../../instructeur");
         } else {
             $th = "<th>Type Voertuig</th>
             <th>Type</th>
@@ -29,6 +30,9 @@ class AlleVoertuigen extends BaseController
             $result = $this->alleVoertuigenModel->getVoertuigen();
             $rows = "";
             foreach ($result as $voertuig) {
+                $voertuigen = $voertuig->VoertuigID;
+                $instructeur = $voertuig->InstructeurID;
+
                 $rows .= "<tr>
                 <td>$voertuig->TypeVoertuig</td>
                 <td>$voertuig->Type</td>
@@ -38,7 +42,7 @@ class AlleVoertuigen extends BaseController
                 <td>$voertuig->Rijbewijscategorie</td>
                 <td>$voertuig->InstructeurNaam</td>
                 <td>
-                    <a href='../../delete/id/$voertuig->VoertuigID'>
+                    <a href='../../delete/id/$voertuigen?voertuig=$voertuigen&instructeur=$instructeur&case=0'>
                         <i class='bx bxs-trash' style='color:#ff0000'></i>
                     </a>
                 </td>
