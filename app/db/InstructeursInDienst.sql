@@ -89,6 +89,6 @@ INSERT INTO VoertuigInstructeur VALUES
 (NULL, 1, 5, '2017-06-18', '1', NULL, sysdate(6), sysdate(6)),
 (NULL, 3, 1, '2021-09-26', '1', NULL, sysdate(6), sysdate(6)),
 (NULL, 9, 1, '2021-09-27', '1', NULL, sysdate(6), sysdate(6)),
-(NULL, 3, 4, '2022-08-01', '1', NULL, sysdate(6), sysdate(6)),
+(NULL, 4, 4, '2022-08-01', '1', NULL, sysdate(6), sysdate(6)),
 (NULL, 5, 1, '2019-08-30', '1', NULL, sysdate(6), sysdate(6)),
 (NULL, 10, 5, '2020-02-02', '1', NULL, sysdate(6), sysdate(6));
