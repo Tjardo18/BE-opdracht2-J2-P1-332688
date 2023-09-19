@@ -20,6 +20,7 @@
         <ul class="navbar">
             <li><a href="<?= URLROOT; ?>" class="active">Home</a></li>
             <li><a href="<?= URLROOT; ?>/instructeur">Instructeurs</a></li>
+            <li><a href="<?= URLROOT; ?>/allevoertuigen">Alle voertuigen</a></li>
         </ul>
 
         <div class="main">
